@@ -16,8 +16,10 @@ def set_pixels(pixels_array):
 
         if pixel > settings.FONT_TOLERANCE:
             sio.emit("pixelYellow", {"X": x, "Y": y})
+            #print("Yellow on    {}:{}".format(x,y))
         else:
             sio.emit("pixelBlack", {"X": x, "Y": y})
+            #print("Black on     {}:{}".format(x,y))
 
         time.sleep(settings.BUS_SPEED)
         i += 1
